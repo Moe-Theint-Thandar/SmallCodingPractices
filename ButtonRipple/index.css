@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: rgb(122, 159, 228);
+    font-family: sans-serif;
+
+
+}
+.btn{
+    background-color: rgb(0, 0, 0);
+    padding: 20px 40px;
+    color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(189, 0, 0, 0.3);
+    text-decoration:none;
+    position: relative;
+    overflow: hidden;
+
+}
+.btn span{
+    position: relative;
+    z-index: 1;
+  
+}
+
+.btn::before{
+    content: "";
+    position:absolute;
+    background-color: rgb(109, 64, 34);
+    width: 0px;
+    height: 0px;
+    left:var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    transition: width .5s,height .5s;
+    
+}
+.btn:hover::before{
+    width: 300px;
+    height: 300px;
+   
+}
+
